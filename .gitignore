@@ -8,5 +8,22 @@
 *.war
 *.ear
 
+# ignore Netbeans stuff
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+.nb-gradle/
+
+#ignore local data content
+distributions/
+*.csv
+
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+nbproject/genfiles.properties
+
+nbproject/build-impl.xml
