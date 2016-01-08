@@ -4,26 +4,26 @@
  * and open the template in the editor.
  */
 
-package wikiauswertung;
+package wikidash;
 
-import java.util.ArrayList;
+import java.util.TreeMap;
 
 /**
  *
  * @author nico
  */
-public class WikiSession {
+public class CountWikiSession {
     
     private String dashBoard;
     private String sessionKey;
-    private ArrayList<Action> actions;
+    private TreeMap<String, Double> sessionActionsDistribution;
     private String timeGroup;
 
-    WikiSession(String sessionKey, String dashboard, ArrayList<Action> sessionActions, String timeGroup) {
+    CountWikiSession(String sessionKey, String dashboard, TreeMap<String, Double> sessionActionsDistribution, String timeGroup) {
         this.sessionKey = sessionKey;
         this.dashBoard = dashboard;
-        this.actions = sessionActions;
         this.timeGroup = timeGroup;
+        this.sessionActionsDistribution = sessionActionsDistribution;
     }
 
     /**
@@ -41,20 +41,6 @@ public class WikiSession {
     }
 
     /**
-     * @return the actions
-     */
-    public ArrayList<Action> getActions() {
-        return actions;
-    }
-
-    /**
-     * @param actions the actions to set
-     */
-    public void setActions(ArrayList<Action> actions) {
-        this.actions = actions;
-    }
-
-    /**
      * @return the sessionKey
      */
     public String getSessionKey() {
@@ -66,15 +52,6 @@ public class WikiSession {
      */
     public void setSessionKey(String sessionKey) {
         this.sessionKey = sessionKey;
-    }
-    
-    @Override
-    public String toString(){
-        String result = "";
-        for(Action a:this.actions){
-            result += this.sessionKey+";"+this.dashBoard+";"+a.toString()+"\n";
-        }
-        return result;
     }
 
     /**
@@ -89,6 +66,20 @@ public class WikiSession {
      */
     public void setTimeGroup(String timeGroup) {
         this.timeGroup = timeGroup;
+    }
+
+    /**
+     * @return the sessionActionsDistribution
+     */
+    public TreeMap<String, Double> getSessionActionsDistribution() {
+        return sessionActionsDistribution;
+    }
+
+    /**
+     * @param sessionActionsDistribution the sessionActionsDistribution to set
+     */
+    public void setSessionActionsDistribution(TreeMap<String, Double> sessionActionsDistribution) {
+        this.sessionActionsDistribution = sessionActionsDistribution;
     }
     
 }
