@@ -174,8 +174,8 @@ public class SessionConstruction {
 //17 	5 	2 	2 		/sofiswiki/Spezial:GesisDashboardA5F3
 
     public static TreeMap<String, LinkedList<String[]>> createConditionHypotheses() {
-        TreeMap<String, LinkedList<String[]>> hypothesis = new TreeMap<>();
-
+        TreeMap<String, LinkedList<String[]>> hypothesis = new TreeMap<>();             
+        
         String[] a1 = {"A1F0", "A1F2", "A1F2", "A1F3"};
         String[] a2 = {"A2F0", "A2F2", "A2F2", "A2F3"};
         String[] a3 = {"A3F0", "A3F2", "A3F2", "A3F3"};
@@ -281,6 +281,11 @@ public class SessionConstruction {
     }
 
     public static TreeMap<String, LinkedList<String[]>> createHypotheses() {
+    
+        // A1-A5 = different "actions"
+        // F0+F1 = non-motivational text
+        // F2+F3 = motivational text
+                
         LinkedList<String[]> h1 = new LinkedList<>();
         String[] h1a = {"A1F0", "A1F2", "A2F0", "A2F2", "A3F0", "A3F2", "A5F0", "A5F2"};
         String[] h1b = {"A1F1", "A1F3", "A2F1", "A2F3", "A3F1", "A3F3", "A5F1", "A5F3"};
@@ -311,6 +316,13 @@ public class SessionConstruction {
         String[] h6b = {"A1F0", "A1F1", "A1F2", "A1F3", "A2F0", "A2F1", "A2F2", "A2F3", "A3F0", "A3F1", "A3F2", "A3F3", "A5F0", "A5F1", "A5F2", "A5F3"};
         h6.add(h6a);
         h6.add(h6b);
+        
+        LinkedList<String[]> h7 = new LinkedList<>();
+        String[] h7a = {"A1F0", "A1F1", "A2F0", "A2F1", "A3F0", "A3F1", "A5F0", "A5F1"};
+        String[] h7b = {"A1F2", "A1F3", "A2F2", "A2F3", "A3F2", "A3F3", "A5F2", "A5F3"};        
+        h7.add(h7a);
+        h7.add(h7b);
+        
         TreeMap<String, LinkedList<String[]>> hypothesis = new TreeMap<>();
         hypothesis.put("h1", h1);
         hypothesis.put("h2", h2);
@@ -318,6 +330,7 @@ public class SessionConstruction {
         hypothesis.put("h4", h4);
         hypothesis.put("h5", h5);
         hypothesis.put("h6", h6);
+        hypothesis.put("h7", h7);
         return hypothesis;
     }
 

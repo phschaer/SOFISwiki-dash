@@ -41,6 +41,7 @@ public class SmirnovEvaluation {
                     double sampleSizeA = countSessions(distrA);
                     double sampleSizeB = countSessions(distrB);
 
+                    // Threshold values were taken from literature:
                     // see W.J. Conover - Practical Nonparametric statistics
                     // 0.9 : 1.07  ; 0.95 : 1.22
                     // 0.9 : 1.22  ; 0.95 : 1,36
