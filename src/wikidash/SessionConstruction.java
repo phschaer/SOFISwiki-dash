@@ -32,6 +32,7 @@ import org.joda.time.LocalDate;
 /**
  *
  * @author nico
+ * @author @phschaer
  */
 public class SessionConstruction {
 
